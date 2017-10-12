@@ -7,4 +7,4 @@ const buf = fs.readFileSync('output')
 const obj = messages.User.decode(buf)
 
 console.log("Buffer:", buf)
-console.log("Object:", obj)
+console.log("Object:", JSON.stringify(obj, null,2))

@@ -4,8 +4,9 @@ const protobuf = require('protocol-buffers')
 const messages = protobuf(fs.readFileSync('schema.proto'))
  
 const obj = {
-  first_name: "John",
-  last_name: "Smith"
+    name: "John Smith",
+    post_count: 42,
+    val: 3.1415,
 }
 
 const buf = messages.User.encode(obj)
